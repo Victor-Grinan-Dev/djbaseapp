@@ -635,3 +635,7 @@ urlpatterns = [
 ```shell
 npm create vite@latest
 ```
+
+### react routing:
+
+- https://reactrouter.com/start/library/routing

@@ -1,16 +1,26 @@
-import { useState } from 'react'
-import './App.css'
+import { Routes, Route } from "react-router";
+import Homepage from './pages/home/Homepage';
+import TodoList from './pages/todoList/TodoList';
+import { Outlet, Navigate } from 'react-router';
 
-function App() {
-  const [count, setCount] = useState(0)
+
+
+const ProtectedRoute = () => {
+  const isAuthenticated = false; 
+  return isAuthenticated ? <Outlet /> : <Navigate to="/login" />;
+};
+
+const App = () => {
 
   return (
-    <>
-      <div>
-        hello
-      </div>
-    </>
+      <Routes>
+
+        <Route index element={<Homepage />} />
+        <Route path="todo" element={<TodoList />} />
+
+      </Routes>
+
   )
 }
 
-export default App
+export default App;
