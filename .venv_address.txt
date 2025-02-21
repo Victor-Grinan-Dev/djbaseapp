@@ -1,0 +1,1 @@
+coding/projects_PYTHON/djbaseapp/.venv/Scripts
